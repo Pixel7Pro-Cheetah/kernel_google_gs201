@@ -2,7 +2,7 @@
 VERSION = 5
 PATCHLEVEL = 10
 SUBLEVEL = 189
-EXTRAVERSION = NeogenKernel
+EXTRAVERSION = Poponix-ksu
 NAME = Dare mighty things
 
 ifeq ($(MAKECMDGOALS),)
