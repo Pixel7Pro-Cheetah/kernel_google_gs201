@@ -35,9 +35,9 @@ else
 	LINUX_COMPILE_BY="Pyrtle93"
 fi
 if test -z "$KBUILD_BUILD_HOST"; then
-	LINUX_COMPILE_HOST="Pyrtle93"
+	LINUX_COMPILE_HOST="ProjectMatrixx"
 else
-	LINUX_COMPILE_HOST="Pyrtle93"
+	LINUX_COMPILE_HOST="ProjectMatrixx"
 fi
 
 UTS_VERSION="#$VERSION"
@@ -59,8 +59,8 @@ UTS_VERSION="$(echo $UTS_VERSION $CONFIG_FLAGS $TIMESTAMP | cut -b -$UTS_LEN)"
 
   echo \#define UTS_VERSION \"$UTS_VERSION\"
 
-  printf '#define LINUX_COMPILE_BY "%s"\n' "$LINUX_COMPILE_BY"
-  echo \#define LINUX_COMPILE_HOST \"$LINUX_COMPILE_HOST\"
+  printf '#define LINUX_COMPILE_BY "%s"\n' "$Pyrtle93"
+  echo \#define LINUX_COMPILE_HOST \"ProjectMatrixx\"
 
   CC_VERSION=$($CC -v 2>&1 | grep ' version ' | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
   LD_VERSION=$($LD -v | sed 's/(..*)//g' | sed 's/[[:space:]]*$//')
