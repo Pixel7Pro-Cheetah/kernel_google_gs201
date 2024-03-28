@@ -2,34 +2,31 @@
 ## osm0sis @ xda-developers
 
 ### AnyKernel setup
-# begin properties
+# global properties
 properties() { '
-kernel.string=SultanStarlite Kernel for the Pixel 7/Pro and 7a
+kernel.string=NeogenKernel version 1.0 for the Pixel 7 Series
 do.devicecheck=1
-do.modules=0
+do.modules=1
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=cheetah
-device.name2=panther
-device.name3=lynx
-supported.versions=13
-supported.patchlevels=2023-06 -
+device.name1=lynx
+device.name1=panther
+supported.versions=14
+supported.patchlevels=2024-01 - 2024-02
 '; } # end properties
 
-# boot image installation
+# boot shell variables
 block=boot;
 is_slot_device=1;
+ramdisk_compression=auto;
+patch_vbmeta_flag=auto;
+
+# import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh;
-split_boot;
-flash_boot;
 
-# vendor_kernel_boot installation (for dtb)
-block=vendor_kernel_boot;
-is_slot_device=1;
-reset_ak;
-split_boot;
-flash_boot;
-
-# dtbo installation
-flash_generic dtbo;
+# boot install
+dump_boot;
+write_boot;
+## end boot install
