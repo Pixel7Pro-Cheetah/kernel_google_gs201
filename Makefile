@@ -2,7 +2,7 @@
 VERSION = 5
 PATCHLEVEL = 10
 SUBLEVEL = 189
-EXTRAVERSION = NeogenKernel-pantah_V1.0
+EXTRAVERSION = NeogenKernel
 NAME = Dare mighty things
 
 ifeq ($(MAKECMDGOALS),)
